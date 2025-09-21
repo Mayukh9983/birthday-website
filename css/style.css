@@ -1,0 +1,175 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(-45deg, #f8b195, #f67280, #c06c84, #6c5b7b);
+    background-size: 400% 400%;
+    animation: gradientShift 15s ease infinite;
+    color: #ffffff;
+    text-align: center;
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.birthday-greeting {
+    background: rgba(0, 0, 0, 0.25);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+h1 {
+    font-size: 3rem;
+    border-right: .15em solid #fff;
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: .15em;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+    animation: 
+        typing 3.5s steps(40, end),
+        blink-caret .75s step-end infinite;
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #fff; }
+}
+
+.name {
+    color: #f8b195;
+    text-shadow: 0 0 10px #f8b195, 0 0 20px #f8b195;
+    animation: glow 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px #f8b195, 0 0 20px #f8b195, 0 0 30px #f8b195;
+    }
+    to {
+        text-shadow: 0 0 20px #f8b195, 0 0 30px #f8b195, 0 0 40px #f8b195;
+    }
+}
+
+p {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    opacity: 0;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+    animation: fadeIn 2s ease-in 4s forwards;
+}
+
+.from-message {
+    font-size: 1.2rem;
+    margin-top: 2rem;
+    opacity: 0;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+    animation: fadeIn 2s ease-in 5.5s forwards;
+}
+
+.bengali-wish {
+    font-family: 'Atma', cursive;
+    font-size: 25px;
+    margin-top: 1.5rem;
+    opacity: 0;
+    line-height: 1.7;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.wish-1 {
+    animation: popIn 1.5s ease-out 7s forwards;
+}
+
+.wish-2 {
+    animation: popIn 1.5s ease-out 9s forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes popIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    80% {
+        opacity: 1;
+        transform: scale(1.05);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.flower {
+    position: absolute;
+    top: -50px; /* Start above the screen */
+    opacity: 0.9;
+    animation: fall linear infinite, rotate linear infinite;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(110vh);
+    }
+}
+
+@keyframes rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Photo Gallery Styles */
+.photo-gallery {
+    margin-top: 4rem;
+    width: 90%;
+    max-width: 1000px;
+    text-align: center;
+    opacity: 0;
+    animation: fadeIn 2s ease-in 11s forwards;
+}
+
+.photo-gallery h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.gallery-container img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 15px;
+    border: 3px solid #fff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-container img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.4);
+}
+
