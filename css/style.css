@@ -116,23 +116,6 @@ p {
     }
 }
 
-.flower {
-    position: absolute;
-    top: -50px; /* Start above the screen */
-    opacity: 0.9;
-    animation: fall linear infinite, rotate linear infinite;
-}
-
-@keyframes fall {
-    to {
-        transform: translateY(110vh);
-    }
-}
-
-@keyframes rotate {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-}
 
 /* Photo Gallery Styles */
 .photo-gallery {
